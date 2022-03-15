@@ -17,9 +17,12 @@ class HomeActivity : AppCompatActivity(), HomeContract.View {
     //    val component = HomeComponent by lazy {
 //
 //    }
+
+    lateinit var homeComponent: HomeComponent
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+//        homeComponent = DaggerHome
     }
 
     override fun showLoading() {

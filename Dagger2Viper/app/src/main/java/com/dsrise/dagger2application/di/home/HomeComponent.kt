@@ -1,7 +1,9 @@
 package com.dsrise.dagger2application.di.home
 
 import android.app.Activity
+import androidx.appcompat.app.AppCompatActivity
 import com.dsrise.dagger2application.ui.HomeActivity
+import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
 
@@ -17,8 +19,10 @@ interface HomeComponent {
 //    }
     @Component.Builder
     interface Builder {
-        fun activity(activity: Activity): Builder
+
         fun build(): HomeComponent
+
+        fun activity(@BindsInstance activity: AppCompatActivity):Builder
 
     }
 }
